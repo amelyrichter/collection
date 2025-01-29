@@ -1,0 +1,69 @@
+body {
+	--base-size: 16px;
+	--gutter-size: var(--base-size);
+
+	--color--primary: black;
+	--color--secondary: #f4f4f4;
+	--color--background: #f4f4f4;
+
+	--font-family-01: "Space Grotesk", serif;
+						font-optical-sizing: auto;
+						font-style: normal;
+
+	font-size: var(--base-size);
+	font-family: var(--font-family-01);
+}
+
+@media screen and (min-width: 600px) {
+	:root {
+		--base-size: 20px;
+		--gutter-size: calc(3 * var(--base-size));
+	}
+}
+
+header {
+	background-color: var(--color--background);
+	padding-block: calc(5 * var(--base-size));
+}
+
+section {
+	/* block-size: 60vh; */
+	padding-block: 20px;
+	
+}
+
+footer {
+	--base-size: 48px;
+
+	padding-top: var(--base-size);
+	padding-bottom: calc(5 * var(--base-size));
+	background-color: var(--color--secondary);
+}
+
+li {
+	list-style-type: circle;
+	padding-block: calc(2 * var(--base-size));
+}
+
+h1 {
+	font-size: calc(2 * var(--base-size));
+	color: #332de5;
+	/* color: #f5280d; */
+}
+
+body > section > p:nth-child(1) {
+ font-weight: 800;
+}
+
+body > section > ul > li > a > p:nth-child(1) {
+	text-decoration: underline;
+}
+
+body > section > ul > li > a > p:nth-child(1):hover {
+	color: red;
+}
+
+
+.gutters {
+	padding-inline: calc(3 * var(--gutter-size));
+}
