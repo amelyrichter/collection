@@ -9,7 +9,7 @@ body {
 			--color-blue-03: #012840;
 			--color-blue-04: #83D8EF;
 			--color-blue-05: rgb(31, 81, 255);
-			--color-blue-06: rgb(15, 240, 252);
+			--color-blue-06: #0ff0fc;
 
 			--color-green-01: #025959;
 			--color-green-02: #0f8c8c;
@@ -68,6 +68,8 @@ h1 {
 	font-family: "Rubik Glitch", serif;
 	font-weight: 400;
 	font-style: normal;
+	/* box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1); */
+	text-shadow: 0 0 2px #fff, 0 0 2px #0ff0fc, 0 0 40px #0ff0fc, 0 0 2px #0ff0fc, 0 0 4px #0ff0fc, 0 0 4px #0ff0fc, 0 0 6px #0ff0fc;
 }
 
 /* .image {
