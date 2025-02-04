@@ -67,3 +67,9 @@ body > section > ul > li > a > p:nth-child(1):hover {
 .gutters {
 	padding-inline: calc(3 * var(--gutter-size));
 }
+
+.hero-image {
+		width: 100%;
+		height: 33vh;
+	
+}
