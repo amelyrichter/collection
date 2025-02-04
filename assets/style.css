@@ -49,7 +49,7 @@ footer {
 	--base-size: 48px;
 
 	padding-top: var(--base-size);
-	padding-bottom: calc(5 * var(--base-size));
+	padding-bottom: calc(2 * var(--base-size));
 	background-color: var(--color--secondary);
 }
 
@@ -59,12 +59,15 @@ li {
 }
 
 p {
-	max-width: 40%;
+	max-width: 60vw;
 }
 
 h1 {
 	font-size: calc(2 * var(--base-size));
-	color: var(--color-blue-06);
+	color: var(--color-blue-05);
+	font-family: "Rubik Glitch", serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 /* .image {
@@ -97,7 +100,6 @@ img {
 	height: auto;
 	object-fit: fill;
 }
-
 
 .youtube, .pdf {
 	border-radius: 9999px;
