@@ -2,9 +2,17 @@ body {
 	--base-size: 16px;
 	--gutter-size: var(--base-size);
 
-	--color--primary: black;
-	--color--secondary: #f4f4f4;
-	--color--background: #f4f4f4;
+	/* Color system */
+	--color-blue-01: #021826;
+	--color-blue-02: #011c26;
+	--color-blue-03: #012840;
+	--color-blue-04: #83D8EF;
+
+	--color-green-01: #025959;
+	--color-green-02: #0f8c8c;
+	--color-green-03: #63d248;
+	
+	--color-white: #dedfe4;
 
 	--font-family-01: "Space Grotesk", serif;
 						font-optical-sizing: auto;
@@ -22,7 +30,7 @@ body {
 }
 
 header {
-	background-color: var(--color--background);
+	background-color: var(--color-blue-02);
 	padding-block: calc(5 * var(--base-size));
 }
 
