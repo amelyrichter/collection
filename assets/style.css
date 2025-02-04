@@ -68,7 +68,7 @@ h1 {
 	font-family: "Rubik Glitch", serif;
 	font-weight: 400;
 	font-style: normal;
-	/* box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1); */
+	/* Found on w3 school how to do a glow close to the text https://www.w3schools.com/howto/howto_css_glowing_text.asp*/
 	text-shadow: 0 0 2px #fff, 0 0 2px #0ff0fc, 0 0 40px #0ff0fc, 0 0 2px #0ff0fc, 0 0 4px #0ff0fc, 0 0 4px #0ff0fc, 0 0 6px #0ff0fc;
 }
 
@@ -107,20 +107,6 @@ img {
 	border-radius: 9999px;
  	/* box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1); */
 }
-
-
-body > section > p:nth-child(1) {
- font-weight: 800;
-}
-
-body > section > ul > li > a > p:nth-child(1) {
-	text-decoration: underline;
-}
-
-body > section > ul > li > a > p:nth-child(1):hover {
-	color: red;
-}
-
 
 .gutters {
 	padding-inline: calc(3 * var(--gutter-size));
