@@ -8,7 +8,7 @@ body {
 			--color-blue-02: #011c26;
 			--color-blue-03: #012840;
 			--color-blue-04: #83D8EF;
-			--color-blue-05: rgb(31, 81, 255);
+			--color-blue-05: #1f51ff;
 			--color-blue-06: #0ff0fc;
 
 			--color-green-01: #025959;
@@ -64,12 +64,14 @@ p {
 
 h1 {
 	font-size: calc(2 * var(--base-size));
-	color: var(--color-blue-05);
-	font-family: "Rubik Glitch", serif;
-	font-weight: 400;
+	color: var(--color-blue-00);
+	font-family: "Teko", serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
 	font-style: normal;
+	padding-left: 3rem;
 	/* Found on w3 school how to do a glow close to the text https://www.w3schools.com/howto/howto_css_glowing_text.asp*/
-	text-shadow: 0 0 2px #fff, 0 0 2px #0ff0fc, 0 0 40px #0ff0fc, 0 0 2px #0ff0fc, 0 0 4px #0ff0fc, 0 0 4px #0ff0fc, 0 0 6px #0ff0fc;
+	text-shadow: 0 0 2px #fff, 0 0 2px #1f51ff, 0 0 40px #1f51ff, 0 0 2px #1f51ff, 0 0 4px #1f51ff, 0 0 4px #1f51ff, 0 0 6px #1f51ff;
 }
 
 
@@ -114,10 +116,10 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
+    /* display: flex;
     align-items: left;
     justify-content: left; 
-    text-align: left;
+    text-align: left; */
 }
 
 
