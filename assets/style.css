@@ -1,0 +1,125 @@
+body {
+	--base-size: 16px;
+	--gutter-size: var(--base-size);
+
+			/* Color system */
+			--color-blue-00: #020f16;
+			--color-blue-01: #021826;
+			--color-blue-02: #011c26;
+			--color-blue-03: #012840;
+			--color-blue-04: #83D8EF;
+			--color-blue-05: #1f51ff;
+			--color-blue-06: #0ff0fc;
+
+			--color-green-01: #025959;
+			--color-green-02: #0f8c8c;
+			--color-green-03: #63d248;
+			
+			--color-white: #dedfe4;
+
+	--font-family-01: "Space Grotesk", serif;
+						font-optical-sizing: auto;
+						font-style: normal;
+
+	font-size: var(--base-size);
+	font-family: var(--font-family-01);
+	background-color: var(--color-blue-00);
+	color: var(--color-white);
+}
+
+@media screen and (min-width: 600px) {
+	:root {
+		--base-size: 20px;
+		--gutter-size: calc(3 * var(--base-size));
+	}
+}
+
+header {
+	background-color: var(--color-blue-02);
+	padding-block: calc(5 * var(--base-size));
+}
+
+section {
+	/* block-size: 60vh; */
+	padding-block: 20px;
+	
+}
+
+footer {
+	--base-size: 48px;
+
+	padding-top: var(--base-size);
+	padding-bottom: calc(2 * var(--base-size));
+	background-color: var(--color--secondary);
+}
+
+li {
+	list-style-type: none;
+	padding-block: calc(2 * var(--base-size));
+}
+
+p {
+	max-width: 60vw;
+}
+
+h1 {
+	font-size: calc(2 * var(--base-size));
+	color: var(--color-blue-00);
+	font-family: "Teko", serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
+	font-style: normal;
+	padding-left: 3rem;
+	/* Found on w3 school how to do a glow close to the text https://www.w3schools.com/howto/howto_css_glowing_text.asp*/
+	text-shadow: 0 0 2px #fff, 0 0 2px #1f51ff, 0 0 40px #1f51ff, 0 0 2px #1f51ff, 0 0 4px #1f51ff, 0 0 4px #1f51ff, 0 0 6px #1f51ff;
+}
+
+
+.image-bubble, .pdf-bubble {
+	
+    display: block;
+	border-radius: 9999px;
+	box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1);
+	/* border-radius: 50%; */
+}
+
+/* styles for the different elements */
+img {
+	border-radius: 50%;
+	object-fit: cover;
+	overflow: clip;
+	width: 15em;
+	height: 15em;
+	border-radius: 9999px;
+}
+
+.pdf {
+	width: auto;
+	height: auto;
+	object-fit: fill;
+}
+
+.youtube, .pdf {
+	border-radius: 9999px;
+ 	/* box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1); */
+}
+
+.gutters {
+	padding-inline: calc(3 * var(--gutter-size));
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-image: url("/links/dark-ocean.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* display: flex;
+    align-items: left;
+    justify-content: left; 
+    text-align: left; */
+}
+
+
