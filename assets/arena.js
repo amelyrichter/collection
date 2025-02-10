@@ -50,10 +50,29 @@ let renderBlock = (block) => {
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 	}
 
-	// Images!
-	else if (block.class == 'Image') {
-		// …up to you!
-	}
+	// // Images!
+	// else if (block.class == 'Image') {
+	// 	`<li class="Image">
+	// 	<img class="image-block" src="links/chimaeras.jpg">
+	// 	</li>
+	// 	`
+	// 	// …up to you!
+	// }
+
+
+// Images!
+else if (block.class == 'Image') {
+
+	let imageItem =
+		`
+		<li class="image-block">
+			<img src="${block.image.original.url}">
+		</li>
+		`
+
+	channelBlocks.insertAdjacentHTML('beforeend', imageItem)
+
+		}
 
 	// Text!
 	else if (block.class == 'Text') {
