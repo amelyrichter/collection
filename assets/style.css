@@ -93,7 +93,7 @@ img {
 	border-radius: 9999px;
 }
 
-.pdf {
+.pdf-block {
 	width: auto;
 	height: auto;
 	object-fit: fill;
