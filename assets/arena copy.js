@@ -60,6 +60,10 @@ let renderBlock = (block) => {
 		// …up to you!
 	}
 
+	else if (attachment.includes('Image')) {
+		// …up to you!
+	}
+
 	// Text!
 	else if (block.class == 'Text') {
 		// …up to you!

@@ -25,6 +25,8 @@ body {
 	font-family: var(--font-family-01);
 	background-color: var(--color-blue-00);
 	color: var(--color-white);
+
+	width: 100vw;
 }
 
 @media screen and (min-width: 600px) {
@@ -75,7 +77,7 @@ h1 {
 }
 
 
-.image-bubble, .pdf-bubble {
+.image-block, .pdf-bubble {
 	
     display: block;
 	border-radius: 9999px;
