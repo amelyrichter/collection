@@ -13,9 +13,9 @@ let channelSlug = 'a-deep-dive' // The “slug” is just the end of the URL
 let placeChannelInfo = (data) => {
 	// Target some elements in your HTML:
 	let channelTitle = document.getElementById('channel-title')
-	let channelDescription = document.getElementById('channel-description')
-	let channelCount = document.getElementById('channel-count')
-	let channelLink = document.getElementById('channel-link')
+	// let channelDescription = document.getElementById('channel-description')
+	// let channelCount = document.getElementById('channel-count')
+	// let channelLink = document.getElementById('channel-link')
 
 	// Then set their content/attributes to our data:
 	channelTitle.innerHTML = data.title
