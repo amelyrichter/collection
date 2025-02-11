@@ -58,6 +58,10 @@ footer {
 li {
 	list-style-type: none;
 	padding-block: calc(2 * var(--base-size));
+	width: 15em;
+	height: 15em;
+	object-fit: cover;
+	padding:0px;
 }
 
 p {
@@ -77,28 +81,24 @@ h1 {
 }
 
 
-.image-block, .pdf-bubble {
+.image-block, .pdf-bubble, .yt-video {
 	
     display: block;
-	border-radius: 9999px;
+	border-radius: 100%;
 	box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1);
 	/* border-radius: 50%; */
+	width: 15em;
+	height: 15em;
 }
 
 /* styles for the different elements */
-img {
+img, .youtube, .pdf-block {
 	border-radius: 50%;
 	object-fit: cover;
-	overflow: clip;
+	overflow: hidden;
 	width: 15em;
 	height: 15em;
-	border-radius: 9999px;
-}
-
-.pdf-block {
-	width: auto;
-	height: auto;
-	object-fit: fill;
+	border-radius: 100%;
 }
 
 .youtube, .pdf {
