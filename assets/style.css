@@ -124,4 +124,24 @@ img, .youtube, .pdf-block {
     text-align: left; */
 }
 
+/* grid */
 
+#channel-blocks {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); 
+	gap: calc(2 * var(--gutter-size)); 
+	justify-items: center; 
+	padding-top: 20px;
+}
+
+@media screen and (max-width: 900px) {
+	#channel-blocks {
+		grid-template-columns: repeat(2, 1fr); 
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#channel-blocks {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

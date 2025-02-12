@@ -118,7 +118,7 @@ else if (block.class == 'Image') {
 			let audioItem =
 				`
 				<li>
-					<p><em>Audio</em></p>
+					<p><em></em></p>
 					<audio controls src="${ block.attachment.url }"></video>
 				</li>
 				`
