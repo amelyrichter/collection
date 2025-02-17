@@ -1,5 +1,7 @@
 // console.log('Hello,World!')
 
+console.log("Script Loaded");
+
 // This allows us to process/render the descriptions, which are in Markdown!
 // More about Markdown: https://en.wikipedia.org/wiki/Markdown
 let markdownIt = document.createElement('script')
@@ -25,11 +27,12 @@ let placeChannelInfo = (data) => {
 }
 
 
+
 // Then our big function for specific-block-type rendering:
 let renderBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.getElementById('channel-blocks')
-	// console.log(block)
+	console.log(block)
 
 	// Links!
 	if (block.class == 'Link') {
@@ -180,11 +183,11 @@ let initInteraction = () => {
 		let dialog = block.querySelector('dialog')
 		let closeButton = dialog.querySelector('button')
 
-		openButton.onklick = () => {
+		openButton.onclick = () => {
 			dialog.showModal()
 		}
 
-		closeButton.onklick = () => {
+		closeButton.onclick = () => {
 			dialog.close()
 		}
 
@@ -205,15 +208,13 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		placeChannelInfo(data)
 	
 
-
-	initInteraction()
-
 			// Loop through the `contents` array (list), backwards. Are.na returns them in reverse!
 			data.contents.reverse().forEach((block) => {
 				// console.log(block) // The data for a single block
 				renderBlock(block) // Pass the single block data to the render function
 			})
 	
+			initInteraction()
 	
 
 })
