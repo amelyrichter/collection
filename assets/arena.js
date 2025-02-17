@@ -66,7 +66,17 @@ else if (block.class == 'Image') {
 	let imageItem =
 		`
 		<li class="image-block">
-			<img src="${block.image.original.url}">
+			<button>
+				<img src="${block.image.original.url}">
+			</button>
+				<dialog> 
+					<div>
+						<p>${block.title}</p>
+						<p>${block.description_html}</p>
+					</div>
+					<img src="${block.image.large.url}">
+					<button class="close">× close</button> 
+				</dialog>
 		</li>
 		`
 
@@ -98,8 +108,19 @@ else if (block.class == 'Image') {
 			let videoItem =
 				`
 				<li>
+				<button>
 					<p><em>Video</em></p>
 					<video controls src="${ block.attachment.url }"></video>
+				</button>
+
+				<dialog> 
+					<div>
+						<p>${block.title}</p>
+						<p>${block.description_html}</p>
+					</div>
+					<button class="close">× close</button> 
+				</dialog>	
+
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
@@ -152,6 +173,29 @@ else if (block.class == 'Image') {
 	}
 }
 
+let initInteraction = () => {
+	let blocks = document.querySelectorAll('.image-block, .link-block, .attachment-block')
+	blocks.forEach((block) => {
+		let openButton = block.querySelector('button')
+		let dialog = block.querySelector('dialog')
+		let closeButton = dialog.querySelector('button')
+
+		openButton.onklick = () => {
+			dialog.showModal()
+		}
+
+		closeButton.onklick = () => {
+			dialog.close()
+		}
+
+		dialog.onclick = (event) => {
+			if (event.target == dialog) {
+			dialog.close ()
+			}
+		}
+	})
+
+}
 
 // Now that we have said what we can do, go get the data:
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
@@ -160,6 +204,9 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		console.log(data) // Always good to check your response!
 		placeChannelInfo(data)
 	
+
+
+	initInteraction()
 
 			// Loop through the `contents` array (list), backwards. Are.na returns them in reverse!
 			data.contents.reverse().forEach((block) => {
