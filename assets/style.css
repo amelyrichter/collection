@@ -23,7 +23,10 @@ body {
 
 	font-size: var(--base-size);
 	font-family: var(--font-family-01);
-	background-color: var(--color-blue-00);
+	/* background-color: var(--color-blue-00); */
+	background: linear-gradient(to bottom, #83D8EF, #020f16);
+    background-size: 100% 200%;
+    transition: background 0.2s linear;
 	color: var(--color-white);
 
 	width: 100vw;
