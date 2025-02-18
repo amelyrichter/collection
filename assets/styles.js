@@ -7,3 +7,5 @@ window.addEventListener("scroll", () => {
 
     document.body.style.background = `linear-gradient(to bottom, #42A1DA ${100 - scrollPercent * 100}%, #000C6E)`;
 });
+
+
