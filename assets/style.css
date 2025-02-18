@@ -113,17 +113,17 @@ dialog[open] {
 	border-radius: 100%;
 	box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1);
 	/* border-radius: 50%; */
-	width: 15em;
-	height: 15em;
+	width: 200px;
+	height: 200px;
 }
 
 /* styles for the different elements */
 img, .youtube, .pdf-block, button {
-	border-radius: 50%;
+	border-radius: 100%;
 	object-fit: cover;
 	overflow: hidden;
-	width: 15em;
-	height: 15em;
+	width: 200px;
+	height: 200px;
 	border-radius: 100%;
 }
 
