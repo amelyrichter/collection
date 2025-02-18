@@ -181,7 +181,11 @@ let initInteraction = () => {
 	blocks.forEach((block) => {
 		let openButton = block.querySelector('button')
 		let dialog = block.querySelector('dialog')
-		let closeButton = dialog.querySelector('button')
+		// let closeButton = dialog.querySelector('button')
+
+		if (dialog) {
+			let closeButton = dialog.querySelector('button')
+		}
 
 		openButton.onclick = () => {
 			dialog.showModal()
