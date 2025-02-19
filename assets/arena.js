@@ -161,7 +161,7 @@ else if (block.class == 'Image') {
 			let linkedVideoItem =
 				`
 				<li>
-					<p><em></em></p>
+					<p><em>Linked Video</em></p>
 					${ block.embed.html }
 				</li>
 				`
@@ -176,11 +176,36 @@ else if (block.class == 'Image') {
 	}
 }
 
-let initInteraction = () => {
-	let blocks = document.querySelectorAll('.image-block, .link-block, .attachment-block')
-	blocks.forEach((block) => {
-		let openButton = block.querySelector('button')
-		let dialog = block.querySelector('dialog')
+// let initInteraction = () => {
+// 	let blocks = document.querySelectorAll('.image-block, .link-block, .attachment-block')
+// 	blocks.forEach((block) => {
+// 		let openButton = block.querySelector('button')
+// 		let dialog = block.querySelector('dialog')
+
+
+		let initInteraction = () => {
+			let blocks = document.querySelectorAll('.image-block, .link-block')
+			blocks.forEach((block) => {
+				let openButton = block.querySelector('button')
+				let dialog = block.querySelector('dialog')
+				let closeButton = dialog.querySelector('button')
+		
+				openButton.onclick = () => {
+					dialog.showModal()
+				}
+		
+				closeButton.onclick = () => {
+					dialog.close()
+				}
+		
+				dialog.onclick = (event) => { // Listen on our `modal` also…
+					if (event.target == dialog) { // Only if clicks are to itself (the background).
+						dialog.close() // Close it then too.
+					}
+				}
+			})
+		}
+
 		// let closeButton = dialog.querySelector('button')
 
 		// openButton.onclick = () => {
@@ -215,9 +240,7 @@ let initInteraction = () => {
 		//   }
 
 		// }
-	})
 
-}
 
 // Now that we have said what we can do, go get the data:
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
