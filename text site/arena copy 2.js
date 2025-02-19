@@ -63,29 +63,6 @@ let renderBlock = (block) => {
 	// }
 
 
-// Images!
-else if (block.class == 'Image') {
-
-	let imageItem =
-		`
-		<li class="image-block">
-			<button>
-				<img src="${block.image.original.url}">
-			</button>
-				<dialog> 
-					<div>
-						<p>${block.title}</p>
-						<p>${block.description_html}</p>
-					</div>
-					<img src="${block.image.large.url}">
-					<button class="close">× close</button> 
-				</dialog>
-		</li>
-		`
-
-	channelBlocks.insertAdjacentHTML('beforeend', imageItem)
-
-		}
 
 	// Text!
 	else if (block.class == 'Text') {
@@ -101,35 +78,35 @@ else if (block.class == 'Image') {
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
 	}
 
-	// Uploaded (not linked) media…
-	else if (block.class == 'Attachment') {
-		let attachment = block.attachment.content_type // Save us some repetition
+	// // Uploaded (not linked) media…
+	// else if (block.class == 'Attachment') {
+	// 	let attachment = block.attachment.content_type // Save us some repetition
 
-		// Uploaded videos!
-		if (attachment.includes('video')) {
-			// …still up to you, but we’ll give you the `video` element:
-			let videoItem =
-				`
-				<li>
-				<button>
-					<p><em>Video</em></p>
-					<video controls src="${ block.attachment.url }"></video>
-				</button>
+	// 	// Uploaded videos!
+	// 	if (attachment.includes('video')) {
+	// 		// …still up to you, but we’ll give you the `video` element:
+	// 		let videoItem =
+	// 			`
+	// 			<li>
+	// 			<button>
+	// 				<p><em>Video</em></p>
+	// 				<video controls src="${ block.attachment.url }"></video>
+	// 			</button>
 
-				<dialog> 
-					<div>
-						<p>${block.title}</p>
-						<p>${block.description_html}</p>
-					</div>
-					<button class="close">× close</button> 
-				</dialog>	
+	// 			<dialog> 
+	// 				<div>
+	// 					<p>${block.title}</p>
+	// 					<p>${block.description_html}</p>
+	// 				</div>
+	// 				<button class="close">× close</button> 
+	// 			</dialog>	
 
-				</li>
-				`
-			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
-			// More on video, like the `autoplay` attribute:
-			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
-		}
+	// 			</li>
+	// 			`
+	// 		channelBlocks.insertAdjacentHTML('beforeend', videoItem)
+	// 		// More on video, like the `autoplay` attribute:
+	// 		// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+	// 	}
 
 		// Uploaded PDFs!
 		else if (attachment.includes('pdf')) {
@@ -152,29 +129,28 @@ else if (block.class == 'Image') {
 	}
 
 	// Linked media…
-	else if (block.class == 'Media') {
-		let embed = block.embed.type
+	// else if (block.class == 'Media') {
+	// 	let embed = block.embed.type
 
-		// Linked video!
-		if (embed.includes('video')) {
-			// …still up to you, but here’s an example `iframe` element:
-			let linkedVideoItem =
-				`
-				<li>
-					<p><em>Linked Video</em></p>
-					${ block.embed.html }
-				</li>
-				`
-			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
-			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
-		}
+	// 	// Linked video!
+	// 	if (embed.includes('video')) {
+	// 		// …still up to you, but here’s an example `iframe` element:
+	// 		let linkedVideoItem =
+	// 			`
+	// 			<li>
+	// 				<p><em>Linked Video</em></p>
+	// 				${ block.embed.html }
+	// 			</li>
+	// 			`
+	// 		channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
+	// 		// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
+	// 	}
 
-		// Linked audio!
-		else if (embed.includes('rich')) {
-			// …up to you!
-		}
-	}
-}
+	// 	// Linked audio!
+	// 	else if (embed.includes('rich')) {
+	// 		// …up to you!
+	// 	}
+	// }
 
 let initInteraction = () => {
 	let blocks = document.querySelectorAll('.image-block, .link-block, .attachment-block')
@@ -183,38 +159,23 @@ let initInteraction = () => {
 		let dialog = block.querySelector('dialog')
 		// let closeButton = dialog.querySelector('button')
 
-		// openButton.onclick = () => {
-		// 	dialog.showModal()
-		// }
+		if (dialog) {
+			let closeButton = dialog.querySelector('button')
+		}
 
-		// closeButton.onclick = () => {
-		// 	dialog.close()
-		// }
+		openButton.onclick = () => {
+			dialog.showModal()
+		}
 
-		// dialog.onclick = (event) => {
-		// 	if (event.target == dialog) {
-		// 	dialog.close ()
-		// 	}
+		closeButton.onclick = () => {
+			dialog.close()
+		}
 
-		// if (dialog) {
-		// 	let closeButton = dialog.querySelector('button')
-
-		// }
-
-		// if (dialog) {
-		// 	let closeButton = dialog.querySelector('button')
-		// 	openButton.onclick = () = {
-		// 		dialog.showModal()
-		// 	}
-		// 	closeButton.onclick = () => {
-		// 		dialog.close()
-		// 	}
-		// 	dialog.onclick = () =>  {
-		// 		dialog.show()
-		// 	}
-		//   }
-
-		// }
+		dialog.onclick = (event) => {
+			if (event.target == dialog) {
+			dialog.close ()
+			}
+		}
 	})
 
 }

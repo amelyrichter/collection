@@ -29,7 +29,9 @@ body {
     transition: background 0.2s linear;
 	color: var(--color-white);
 
-	cursor: url('/links/angel-haken.svg'), auto;
+	
+	cursor: url('../links/angel-haken.png'), auto;
+
 }
 
 @media screen and (min-width: 600px) {
@@ -72,15 +74,16 @@ p {
 }
 
 h1 {
-	font-size: calc(2 * var(--base-size));
-	color: var(--color-blue-00);
-	font-family: "Teko", serif;
+	font-size: calc(3 * var(--base-size));
+	color: var(--color-blue-04);
+	font-family: "PT Sans Narrow", serif;
 	font-optical-sizing: auto;
 	font-weight: 900;
 	font-style: normal;
-	padding-left: 3rem;
+	/* padding-left: 3rem; */
+	text-align: center;
 	/* Found on w3 school how to do a glow close to the text https://www.w3schools.com/howto/howto_css_glowing_text.asp*/
-	text-shadow: 0 0 2px #fff, 0 0 2px #1f51ff, 0 0 40px #1f51ff, 0 0 2px #1f51ff, 0 0 4px #1f51ff, 0 0 4px #1f51ff, 0 0 6px #1f51ff;
+	/* text-shadow: 0 0 2px #fff, 0 0 2px #1f51ff, 0 0 40px #1f51ff, 0 0 2px #1f51ff, 0 0 4px #1f51ff, 0 0 4px #1f51ff, 0 0 6px #1f51ff; */
 }
 
 
@@ -89,7 +92,7 @@ h1 {
 	backdrop-filter: blur(8px);
 }
 
-.image-block, .pdf-bubble, .yt-video, .ytp-cued-thumbnail-overlay {
+.image-block, .pdf-bubble, .yt-video, .ytp-cued-thumbnail-overlay, .youtube {
 	
     display: block;
 	border-radius: 100%;
@@ -97,6 +100,18 @@ h1 {
 	/* border-radius: 50%; */
 	width: 200px;
 	height: 200px;
+	animation:  2s ease-in infinite;
+	animation-name:hover;
+}
+
+.yt-video, .ytp-cued-thumbnail-overlay{
+	animation: 3s ease-in infinite;
+}
+
+@keyframes hover{
+	0% {transform: translateY(0);}
+	50%{transform: translateY(-20px);}
+	100% {transform: translateY(0);}
 }
 
 .image-block dialog div {
@@ -125,7 +140,7 @@ dialog[close] {
 }
 
 /* styles for the different elements */
-img, .youtube, .pdf-block, button {
+img, .youtube, .pdf-block, button, iframe {
 	border-radius: 100%;
 	object-fit: cover;
 	overflow: hidden;
@@ -162,21 +177,26 @@ img, .youtube, .pdf-block, button {
 #channel-blocks {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr); 
-	gap: calc(2 * var(--gutter-size)); 
+	gap: calc(4 * var(--gutter-size)); 
 	justify-items: center; 
 	padding-top: 20px;
+}
+
+#channel-blocks{
+	cursor: url('../links/angel-haken.png'), auto;
+
 }
 
 
 
 @media screen and (max-width: 900px) {
 	#channel-blocks {
-		grid-template-columns: repeat(2, 1fr); 
+		grid-template-columns: repeat(3, 1fr); 
 	}
 }
 
 @media screen and (max-width: 600px) {
 	#channel-blocks {
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
