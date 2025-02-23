@@ -53,16 +53,6 @@ let renderBlock = (block) => {
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 	}
 
-	// // Images!
-	// else if (block.class == 'Image') {
-	// 	`<li class="Image">
-	// 	<img class="image-block" src="links/chimaeras.jpg">
-	// 	</li>
-	// 	`
-	// 	// …up to you!
-	// }
-
-
 // Images!
 else if (block.class == 'Image') {
 
@@ -82,10 +72,8 @@ else if (block.class == 'Image') {
 				</dialog>
 		</li>
 		`
-
-	channelBlocks.insertAdjacentHTML('beforeend', imageItem)
-
-		}
+		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
+	}
 
 	// Text!
 	else if (block.class == 'Text') {
@@ -97,7 +85,6 @@ else if (block.class == 'Image') {
 				<p class="small">Created on December 13th</p>
 			</li>
 		`
-
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)
 	}
 
@@ -176,13 +163,6 @@ else if (block.class == 'Image') {
 	}
 }
 
-// let initInteraction = () => {
-// 	let blocks = document.querySelectorAll('.image-block, .link-block, .attachment-block')
-// 	blocks.forEach((block) => {
-// 		let openButton = block.querySelector('button')
-// 		let dialog = block.querySelector('dialog')
-
-
 		let initInteraction = () => {
 			let blocks = document.querySelectorAll('.image-block, .link-block')
 			blocks.forEach((block) => {
@@ -205,42 +185,6 @@ else if (block.class == 'Image') {
 				}
 			})
 		}
-
-		// let closeButton = dialog.querySelector('button')
-
-		// openButton.onclick = () => {
-		// 	dialog.showModal()
-		// }
-
-		// closeButton.onclick = () => {
-		// 	dialog.close()
-		// }
-
-		// dialog.onclick = (event) => {
-		// 	if (event.target == dialog) {
-		// 	dialog.close ()
-		// 	}
-
-		// if (dialog) {
-		// 	let closeButton = dialog.querySelector('button')
-
-		// }
-
-		// if (dialog) {
-		// 	let closeButton = dialog.querySelector('button')
-		// 	openButton.onclick = () = {
-		// 		dialog.showModal()
-		// 	}
-		// 	closeButton.onclick = () => {
-		// 		dialog.close()
-		// 	}
-		// 	dialog.onclick = () =>  {
-		// 		dialog.show()
-		// 	}
-		//   }
-
-		// }
-
 
 // Now that we have said what we can do, go get the data:
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
