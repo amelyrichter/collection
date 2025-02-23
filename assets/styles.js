@@ -11,6 +11,7 @@ window.addEventListener("scroll", () => {
 let channelBlocks = document.querySelector('#channel-blocks')
 let showVideoButton = document.querySelector('#show-video-button')
 let showImageButton = document.querySelector('#show-image-button')
+let showAudioButton = document.querySelector('#show-audio-button')
 let showAllButton = document.querySelector('#show-all-button')
 
 showVideoButton.onclick = () => {
@@ -21,8 +22,13 @@ showImageButton.onclick = () => {
     channelBlocks.classList.add('show-image')
 }
 
+showAudioButton.onclick = () => {
+    channelBlocks.classList.add('show-audio')
+}
+
 showAllButton.onclick = () => {
     channelBlocks.classList.remove('show-video')
     channelBlocks.classList.remove('show-image')
+    channelBlocks.classList.remove('show-audio')
 }
 

@@ -221,6 +221,14 @@ img, .youtube, .pdf-block, button, iframe {
 	display: block;
 }
 
+.show-audio li {
+	display: none;
+}
+
+.show-audio li.audio-block {
+	display: block;
+}
+
 /* .hero {
     position: relative;
     width: 100%;
