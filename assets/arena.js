@@ -26,8 +26,6 @@ let placeChannelInfo = (data) => {
 	channelLink.href = `https://www.are.na/channel/${channelSlug}`
 }
 
-
-
 // Then our big function for specific-block-type rendering:
 let renderBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks

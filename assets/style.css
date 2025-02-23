@@ -17,21 +17,19 @@ body {
 			
 			--color-white: #dedfe4;
 
-	--font-family-01: "Space Grotesk", serif;
-						font-optical-sizing: auto;
-						font-style: normal;
+			/* Font system */
+			--font-family-01: "Space Grotesk", serif;
+								font-optical-sizing: auto;
+								font-style: normal;
 
 	font-size: var(--base-size);
 	font-family: var(--font-family-01);
-	/* background-color: var(--color-blue-00); */
 	background: linear-gradient(to bottom, var(--color-blue-02), rgb(0, 1, 10));
     background-size: 100% 200%;
     transition: background 0.2s linear;
 	color: var(--color-white);
 
-	
 	cursor: url('../links/angel-haken.png'), auto;
-
 }
 
 @media screen and (min-width: 600px) {
