@@ -213,6 +213,14 @@ img, .youtube, .pdf-block, button, iframe {
 	display: block;
 }
 
+.show-image li {
+	display: none;
+}
+
+.show-image li.image-block {
+	display: block;
+}
+
 /* .hero {
     position: relative;
     width: 100%;
