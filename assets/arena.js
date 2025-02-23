@@ -146,7 +146,7 @@ else if (block.class == 'Image') {
 			let linkedVideoItem =
 				`
 				<li class="video-block">
-					<p><em>Linked Video</em></p>
+					<p><em></em></p>
 					${ block.embed.html }
 				</li>
 				`

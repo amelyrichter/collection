@@ -86,7 +86,7 @@ h1 {
 	backdrop-filter: blur(8px);
 }
 
-.image-block, .pdf-bubble, .yt-video, .ytp-cued-thumbnail-overlay, .youtube {
+.image-block, .pdf-bubble {
 	
     display: block;
 	border-radius: 100%;
@@ -102,6 +102,16 @@ h1 {
 
 .yt-video, .ytp-cued-thumbnail-overlay, .youtube {
 	animation: 3s ease-in infinite;
+}
+
+.video-block, .yt-video, .ytp-cued-thumbnail-overlay, .youtube {
+	display: block;
+	width: auto;
+	height: auto;
+	border-radius: 20%;
+	box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1);
+	object-fit: cover;
+	overflow: hidden;
 }
 
 @keyframes hover{
