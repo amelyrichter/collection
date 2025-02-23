@@ -8,4 +8,21 @@ window.addEventListener("scroll", () => {
     document.body.style.background = `linear-gradient(to bottom, #000C6E ${100 - scrollPercent * 100}%, #00000)`;
 });
 
+let channelBlocks = document.querySelector('#channel-blocks')
+let showVideoButton = document.querySelector('#show-video-button')
+let showImageButton = document.querySelector('#show-image-button')
+let showAllButton = document.querySelector('#show-all-button')
+
+showVideoButton.onclick = () => {
+    channelBlocks.classList.add('show-video')
+}
+
+showImageButton.onclick = () => {
+    channelBlocks.classList.add('show-image')
+}
+
+showAllButton.onclick = () => {
+    channelBlocks.classList.remove('show-video')
+    channelBlocks.classList.remove('show-image')
+}
 

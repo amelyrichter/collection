@@ -149,6 +149,7 @@ button {
 	border: 0px;
 	padding: 0px;
 	padding-inline: 0px;
+	cursor: pointer;
 }
 
 dialog {
@@ -204,6 +205,14 @@ img, .youtube, .pdf-block, button, iframe {
 	padding-inline: calc(3 * var(--gutter-size));
 }
 
+.show-video li {
+	display: none;
+}
+
+.show-video li.video-block {
+	display: block;
+}
+
 /* .hero {
     position: relative;
     width: 100%;
@@ -236,6 +245,7 @@ img, .youtube, .pdf-block, button, iframe {
 #channel-count, body > section.gutters > p {
 	text-align: center;
 }
+
 
 /* Found this on code pen https://codepen.io/ShortCode/pen/oNdBKxo – finetuned the colors, animation, keyframes – but very fitting animation for my topic yay */
 /* liquid header start */
@@ -304,6 +314,8 @@ a .liquid::before {
 
     animation: animate 7s linear infinite;
 }
+/* liquid header end */
+
 
 @keyframes animate {
     0% {

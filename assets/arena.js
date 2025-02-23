@@ -38,7 +38,7 @@ let renderBlock = (block) => {
 	if (block.class == 'Link') {
 		let linkItem =
 			`
-			<li>
+			<li class="link-block">
 				<p><em></em></p>
 				<picture>
 					<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
@@ -110,7 +110,7 @@ else if (block.class == 'Image') {
 			// …still up to you, but we’ll give you the `video` element:
 			let videoItem =
 				`
-				<li>
+				<li class="video-block">
 				<button>
 					<p><em>Video</em></p>
 					<video controls src="${ block.attachment.url }"></video>
@@ -141,7 +141,7 @@ else if (block.class == 'Image') {
 			// …still up to you, but here’s an `audio` element:
 			let audioItem =
 				`
-				<li>
+				<li class="audio-block">
 					<p><em></em></p>
 					<audio controls src="${ block.attachment.url }"></video>
 				</li>
@@ -160,7 +160,7 @@ else if (block.class == 'Image') {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
 				`
-				<li>
+				<li class="video-block">
 					<p><em>Linked Video</em></p>
 					${ block.embed.html }
 				</li>
