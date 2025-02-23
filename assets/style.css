@@ -208,17 +208,27 @@ img, .youtube, .pdf-block, button, iframe {
 	display: none;
 }
 
-.show-link li.pdf-block {
+.show-link li.link-block, li.text-block {
 	display: block;
 }
 
-.show-link {
+/* .show-link {
 	display: none;
 }
 
-.show-link li .link-block {
+.show-link li .link-block, .text-block {
 	display: block;
+} */
+
+/* .show-link {
+	display: none;
 }
+
+.show-link li .text-block {
+	display: block;
+} */
+
+
 
 
 

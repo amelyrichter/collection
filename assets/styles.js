@@ -17,16 +17,22 @@ let showAllButton = document.querySelector('#show-all-button')
 
 showVideoButton.onclick = () => {
     channelBlocks.classList.add('show-video')
+
     channelBlocks.classList.remove('show-image')
     channelBlocks.classList.remove('show-audio')
     channelBlocks.classList.remove('show-pdf')
+    channelBlocks.classList.remove('show-link')
+    channelBlocks.classList.remove('show-text')
 }
 
 showImageButton.onclick = () => {
     channelBlocks.classList.add('show-image')
+    
     channelBlocks.classList.remove('show-video')
     channelBlocks.classList.remove('show-audio')
     channelBlocks.classList.remove('show-pdf')
+    channelBlocks.classList.remove('show-link')
+    channelBlocks.classList.remove('show-text')
 }
 
 showAudioButton.onclick = () => {
@@ -34,25 +40,28 @@ showAudioButton.onclick = () => {
     channelBlocks.classList.remove('show-video')
     channelBlocks.classList.remove('show-image')
     channelBlocks.classList.remove('show-pdf')
+    channelBlocks.classList.remove('show-link')
+    channelBlocks.classList.remove('show-text')
 }
 
 showLinkButton.onclick = () => {
-    channelBlocks.classList.add('show-pdf')
+    // channelBlocks.classList.add('show-pdf')
     channelBlocks.classList.add('show-link')
+    channelBlocks.classList.add('show-text')
 
     channelBlocks.classList.remove('show-video')
     channelBlocks.classList.remove('show-image')
     channelBlocks.classList.remove('show-audio')
 }
 
-showPdfButton.onclick = () => {
-    channelBlocks.classList.add('show-pdf')
-    channelBlocks.classList.add('show-link')
+// showPdfButton.onclick = () => {
+//     channelBlocks.classList.add('show-pdf')
+//     channelBlocks.classList.add('show-link')
 
-    channelBlocks.classList.remove('show-video')
-    channelBlocks.classList.remove('show-image')
-    channelBlocks.classList.remove('show-audio')
-}
+//     channelBlocks.classList.remove('show-video')
+//     channelBlocks.classList.remove('show-image')
+//     channelBlocks.classList.remove('show-audio')
+// }
 
 showAllButton.onclick = () => {
     channelBlocks.classList.remove('show-video')
