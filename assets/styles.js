@@ -27,7 +27,7 @@ showVideoButton.onclick = () => {
 
 showImageButton.onclick = () => {
     channelBlocks.classList.add('show-image')
-    
+
     channelBlocks.classList.remove('show-video')
     channelBlocks.classList.remove('show-audio')
     channelBlocks.classList.remove('show-pdf')
@@ -37,6 +37,7 @@ showImageButton.onclick = () => {
 
 showAudioButton.onclick = () => {
     channelBlocks.classList.add('show-audio')
+    
     channelBlocks.classList.remove('show-video')
     channelBlocks.classList.remove('show-image')
     channelBlocks.classList.remove('show-pdf')
@@ -64,10 +65,11 @@ showLinkButton.onclick = () => {
 // }
 
 showAllButton.onclick = () => {
-    channelBlocks.classList.remove('show-video')
-    channelBlocks.classList.remove('show-image')
-    channelBlocks.classList.remove('show-audio')
-    channelBlocks.classList.remove('show-pdf')
-    
+    channelBlocks.classList.add('show-video')
+    channelBlocks.classList.add('show-image')
+    channelBlocks.classList.add('show-audio')
+    channelBlocks.classList.add('show-pdf')
+    channelBlocks.classList.add('show-link')
+    channelBlocks.classList.add('show-text') 
 }
 
