@@ -167,6 +167,9 @@ img, .youtube, .pdf-block, button, iframe {
 	width: 200px;
 	height: 200px;
 	border-radius: 100%;
+	/* filter: grayscale(1); */
+	background-color: var(--color-blue-05);
+	mix-blend-mode: luminosity;
 }
 
 .youtube, .pdf {
@@ -227,7 +230,6 @@ img, .youtube, .pdf-block, button, iframe {
 .nav-button:hover, .nav-button:active {
 	box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1);
 	color: white;
-	transform: translateY(-5px);
   }
 
   .nav-button:hover {
