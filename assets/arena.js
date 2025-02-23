@@ -203,7 +203,7 @@ else if (block.class == 'Image') {
 						dialog.close() // Close it then too.
 					}
 				}
-			}
+			})
 		}
 
 		// let closeButton = dialog.querySelector('button')

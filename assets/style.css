@@ -204,11 +204,11 @@ img, .youtube, .pdf-block, button, iframe {
 	display: block;
 }
 
-.show-pdf li {
+.show-link li {
 	display: none;
 }
 
-.show-pdf li.pdf-block {
+.show-link li.pdf-block {
 	display: block;
 }
 

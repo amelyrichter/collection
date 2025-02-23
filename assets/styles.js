@@ -12,7 +12,7 @@ let channelBlocks = document.querySelector('#channel-blocks')
 let showVideoButton = document.querySelector('#show-video-button')
 let showImageButton = document.querySelector('#show-image-button')
 let showAudioButton = document.querySelector('#show-audio-button')
-let showPdfButton = document.querySelector('#show-pdf-button')
+let showLinkButton = document.querySelector('#show-link-button')
 let showAllButton = document.querySelector('#show-all-button')
 
 showVideoButton.onclick = () => {
@@ -34,6 +34,15 @@ showAudioButton.onclick = () => {
     channelBlocks.classList.remove('show-video')
     channelBlocks.classList.remove('show-image')
     channelBlocks.classList.remove('show-pdf')
+}
+
+showLinkButton.onclick = () => {
+    channelBlocks.classList.add('show-pdf')
+    channelBlocks.classList.add('show-link')
+
+    channelBlocks.classList.remove('show-video')
+    channelBlocks.classList.remove('show-image')
+    channelBlocks.classList.remove('show-audio')
 }
 
 showPdfButton.onclick = () => {
