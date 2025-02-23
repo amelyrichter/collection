@@ -79,10 +79,7 @@ h1 {
 	font-weight: 900;
 	font-style: normal;
 	text-align: center;
-	/* Found on w3 school how to do a glow close to the text https://www.w3schools.com/howto/howto_css_glowing_text.asp*/
-	/* text-shadow: 0 0 2px #fff, 0 0 2px #1f51ff, 0 0 40px #1f51ff, 0 0 2px #1f51ff, 0 0 4px #1f51ff, 0 0 4px #1f51ff, 0 0 6px #1f51ff; */
 }
-
 
 ::backdrop {
 	background-color: rgb(0 0 0 / 75%);
@@ -94,7 +91,9 @@ h1 {
     display: block;
 	border-radius: 100%;
 	box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1);
-	/* border-radius: 50%; */
+	/* Found on w3 school how to do a glow close to the text https://www.w3schools.com/howto/howto_css_glowing_text.asp*/
+	/* Because I was looking on how to make a glow around actual text rather than a box around the text*/
+	/* With this I can adjust the width and size of the box shadow, the color and the opacity which helped me achieve the look i wanted */
 	width: 200px;
 	height: 200px;
 	animation:  2s ease-in infinite;
@@ -121,6 +120,7 @@ button {
 	background-color: rgb(0 0 0 / 30%);
 	border: 0px;
 	padding: 0px;
+	border-radius: 0px;
 	padding-inline: 0px;
 	cursor: pointer;
 }
@@ -208,6 +208,19 @@ img, .youtube, .pdf-block, button, iframe {
 
 .show-link li.link-block, li.text-block {
 	display: block;
+}
+
+.nav-button {
+	border: none;
+	border-radius: 10%;
+	width: auto;
+	height: auto;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
 }
 
 /* .show-link {
