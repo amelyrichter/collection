@@ -17,18 +17,32 @@ let showAllButton = document.querySelector('#show-all-button')
 
 showVideoButton.onclick = () => {
     channelBlocks.classList.add('show-video')
+    channelBlocks.classList.remove('show-image')
+    channelBlocks.classList.remove('show-audio')
+    channelBlocks.classList.remove('show-pdf')
 }
 
 showImageButton.onclick = () => {
     channelBlocks.classList.add('show-image')
+    channelBlocks.classList.remove('show-video')
+    channelBlocks.classList.remove('show-audio')
+    channelBlocks.classList.remove('show-pdf')
 }
 
 showAudioButton.onclick = () => {
     channelBlocks.classList.add('show-audio')
+    channelBlocks.classList.remove('show-video')
+    channelBlocks.classList.remove('show-image')
+    channelBlocks.classList.remove('show-pdf')
 }
 
-showAudioButton.onclick = () => {
+showPdfButton.onclick = () => {
     channelBlocks.classList.add('show-pdf')
+    channelBlocks.classList.add('show-link')
+
+    channelBlocks.classList.remove('show-video')
+    channelBlocks.classList.remove('show-image')
+    channelBlocks.classList.remove('show-audio')
 }
 
 showAllButton.onclick = () => {

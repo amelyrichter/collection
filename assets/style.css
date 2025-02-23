@@ -204,6 +204,22 @@ img, .youtube, .pdf-block, button, iframe {
 	display: block;
 }
 
+.show-pdf li {
+	display: none;
+}
+
+.show-pdf li.pdf-block {
+	display: block;
+}
+
+.show-link {
+	display: none;
+}
+
+.show-link li .link-block {
+	display: block;
+}
+
 
 
 /* .hero {

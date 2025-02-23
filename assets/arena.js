@@ -203,7 +203,7 @@ else if (block.class == 'Image') {
 						dialog.close() // Close it then too.
 					}
 				}
-			})
+			}
 		}
 
 		// let closeButton = dialog.querySelector('button')
@@ -257,6 +257,4 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 			})
 	
 			initInteraction()
-	
-
 })
