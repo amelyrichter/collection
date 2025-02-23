@@ -221,11 +221,25 @@ img, .youtube, .pdf-block, button, iframe {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
+	margin: 10px;
 }
 
 .nav-button:hover, .nav-button:active {
 	box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1);
 	color: white;
+	transform: translateY(-5px);
+  }
+
+  .nav-button:hover {
+	transform: translateY(-5px);
+  }
+
+  .filter {
+	/* display: block;
+	align-content: center;
+	align-items: center; */
+	justify-content: center;
+	display: flex;
   }
 
 /* .show-link {
