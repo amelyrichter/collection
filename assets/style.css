@@ -80,7 +80,6 @@ h1 {
 	font-optical-sizing: auto;
 	font-weight: 900;
 	font-style: normal;
-	/* padding-left: 3rem; */
 	text-align: center;
 	/* Found on w3 school how to do a glow close to the text https://www.w3schools.com/howto/howto_css_glowing_text.asp*/
 	/* text-shadow: 0 0 2px #fff, 0 0 2px #1f51ff, 0 0 40px #1f51ff, 0 0 2px #1f51ff, 0 0 4px #1f51ff, 0 0 4px #1f51ff, 0 0 6px #1f51ff; */
@@ -114,30 +113,6 @@ h1 {
 	100% {transform: translateY(0);}
 }
 
-/* .image-block dialog div {
-	text-align: center;
-	margin-bottom: 10px;
-}
-
-button {
-	cursor: pointer;
-	padding: 0;
-}
-
-
-dialog[close] {
-	display: none;
-}
-
-.image-block dialog[open] {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	inset: var(--spacing);
-	width: 200px;
-	height: 200px;
-	background-color: red;
-
-} */
 
 /* modal styling start */
 button {
@@ -229,6 +204,8 @@ img, .youtube, .pdf-block, button, iframe {
 	display: block;
 }
 
+
+
 /* .hero {
     position: relative;
     width: 100%;
@@ -241,7 +218,7 @@ img, .youtube, .pdf-block, button, iframe {
     align-items: left;
     justify-content: left; 
     text-align: left; */ 
-}
+
 
 /* grid */
 
