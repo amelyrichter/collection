@@ -86,7 +86,6 @@ else if (block.class == 'Image') {
 		let textItem = `
 			<li class="text-block">
 				<p>${block.content_html}</p>
-				<p class="small">Created on December 13th</p>
 			</li>
 		`
 		channelBlocks.insertAdjacentHTML('beforeend', textItem)

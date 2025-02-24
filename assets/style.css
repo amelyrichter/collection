@@ -86,7 +86,13 @@ h1 {
 	backdrop-filter: blur(8px);
 }
 
+.text-block, .link-block {
+	padding: 60px;
+}
 
+/* .text-block {
+	padding-bottom: 40px;
+} */
 
 .image-block, .pdf-bubble {
 	
