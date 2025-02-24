@@ -106,6 +106,10 @@ h1 {
 	scale: 0.8;
 }
 
+.image-block:nth-child(9n+6) {
+	scale: 0.6;
+}
+
 .yt-video, .ytp-cued-thumbnail-overlay, .youtube {
 	animation: 3s ease-in infinite;
 }
@@ -114,16 +118,30 @@ h1 {
 	display: block;
 	width: auto;
 	height: auto;
-	border-radius: 20%;
+	border-radius: 100%;
 	box-shadow: 0 0 30px 15px rgba(31, 81, 255, 1);
 	object-fit: cover;
 	overflow: hidden;
+	animation:  2s ease-in infinite;
+	animation-name:hover-video;
+}
+
+.link-block:nth-child(2) {
+	scale: 0,6;
 }
 
 @keyframes hover{
 	0% {transform: translateY(0);}
 	50%{transform: translateY(-20px);}
 	100% {transform: translateY(0);}
+}
+
+@keyframes hover-video {
+	0% { transform: translate(0, 0); }
+	25% { transform: translate(15px, -10px); }
+	50% { transform: translate(-10px, -20px); }
+	75% { transform: translate(10px, -10px); }
+	100% { transform: translate(0, 0); }
 }
 
 
