@@ -162,7 +162,7 @@ else if (block.class == 'Image') {
 }
 
 		let initInteraction = () => {
-			let blocks = document.querySelectorAll('.image-block, .link-block')
+			let blocks = document.querySelectorAll('.image-block, .link-block, .video-block')
 			blocks.forEach((block) => {
 				let openButton = block.querySelector('button')
 				let dialog = block.querySelector('dialog')

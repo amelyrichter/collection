@@ -151,6 +151,12 @@ dialog {
 	margin-bottom: 50%;
 }
 
+/* @keyframes animate {
+	from {top: -300px; opacity: 0}
+	to {top: 0; opacity: 1}
+  } */
+
+
 .image-block dialog[open] {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -227,7 +233,15 @@ img, .youtube, .pdf-block, button, iframe {
 	display: none;
 }
 
-.show-link li.link-block, li.text-block {
+.show-text li {
+	display: none;
+}
+
+.show-text li.text-block {
+	display: block;
+}
+
+.show-link li.link-block {
 	display: block;
 }
 /* Filter show and hide section end */
