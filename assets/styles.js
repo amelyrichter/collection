@@ -1,5 +1,6 @@
 // Found on https://stackoverflow.com/questions/56118874/changing-background-linear-grading-degree-on-scroll 
 // This is the scrolling gradient bg
+// It works because I give the gradient a scroll height and connect the colors in percentage to the entire scroll :)
 window.addEventListener("scroll", () => {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
     let docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -37,7 +38,7 @@ showImageButton.onclick = () => {
 
 showAudioButton.onclick = () => {
     channelBlocks.classList.add('show-audio')
-    
+
     channelBlocks.classList.remove('show-video')
     channelBlocks.classList.remove('show-image')
     channelBlocks.classList.remove('show-pdf')

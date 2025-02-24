@@ -191,6 +191,8 @@ img, .youtube, .pdf-block, button, iframe {
 	padding-inline: calc(3 * var(--gutter-size));
 }
 
+
+/* Filter show and hide section start */
 .show-video li {
 	display: none;
 }
@@ -222,6 +224,7 @@ img, .youtube, .pdf-block, button, iframe {
 .show-link li.link-block, li.text-block {
 	display: block;
 }
+/* Filter show and hide section end */
 
 .nav-button {
 	border: none;
@@ -254,39 +257,6 @@ img, .youtube, .pdf-block, button, iframe {
 	display: flex;
   }
 
-/* .show-link {
-	display: none;
-}
-
-.show-link li .link-block, .text-block {
-	display: block;
-} */
-
-/* .show-link {
-	display: none;
-}
-
-.show-link li .text-block {
-	display: block;
-} */
-
-
-
-
-
-/* .hero {
-    position: relative;
-    width: 100%;
-    height: 70vh; 
-    background-image: url("/links/dark-ocean.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* display: flex;
-    align-items: left;
-    justify-content: left; 
-    text-align: left; */ 
-
 
 /* grid */
 
@@ -308,7 +278,9 @@ img, .youtube, .pdf-block, button, iframe {
 }
 
 
-/* Found this on code pen https://codepen.io/ShortCode/pen/oNdBKxo – finetuned the colors, animation, keyframes – but very fitting animation for my topic yay */
+/* Found this on code pen https://codepen.io/ShortCode/pen/oNdBKxo */
+/* Was looking for something that was emphazising the dive feeking */
+/* I finetuned the colors, animation, keyframes – but very fitting animation for my topic yay – It works because of the transition and transform settings that are set for the before and after states, through keyframes the actual points of the waves are moving and give the illusion of it being liquid  */
 /* liquid header start */
 body {
     margin: 0;
@@ -375,8 +347,6 @@ a .liquid::before {
 
     animation: animate 7s linear infinite;
 }
-/* liquid header end */
-
 
 @keyframes animate {
     0% {
