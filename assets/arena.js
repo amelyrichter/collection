@@ -37,15 +37,21 @@ let renderBlock = (block) => {
 		let linkItem =
 			`
 			<li class="link-block">
+			<button>
 				<p><em></em></p>
 				<picture>
 					<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
 					<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
 					<img src="${ block.image.original.url }">
 				</picture>
+			</button>
+			<dialog> 
+				<div>
 				<h3>${ block.title }</h3>
 				${ block.description_html }
 				<p><a href="${ block.source.url }">See the original ↗</a></p>
+			<button class="close">× close</button> 
+			</dialog>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
@@ -146,8 +152,18 @@ else if (block.class == 'Image') {
 			let linkedVideoItem =
 				`
 				<li class="video-block">
+				<button>
 					<p><em></em></p>
 					${ block.embed.html }
+				</button>
+					
+				<dialog> 
+					<div>
+						<p>${block.title}</p>
+						<p>${block.description_html}</p>
+					</div>
+					<button class="close">× close</button> 
+				</dialog>	
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
