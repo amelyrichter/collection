@@ -100,6 +100,12 @@ h1 {
 	animation-name:hover;
 }
 
+.image-block:nth-child(3n+4),
+.image-block:nth-child(7n+2),
+.image-block:nth-child(5n+6){
+	scale: 0.8;
+}
+
 .yt-video, .ytp-cued-thumbnail-overlay, .youtube {
 	animation: 3s ease-in infinite;
 }
