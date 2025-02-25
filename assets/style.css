@@ -62,7 +62,8 @@ section {
 
 footer {
 	--base-size: 48px;
-
+	text-align: center;
+	align-content: center;
 	padding-top: var(--base-size);
 	padding-bottom: calc(2 * var(--base-size));
 	background-color: var(--color--secondary);
@@ -432,6 +433,9 @@ img, .youtube, .pdf-block, button, iframe {
 
 #channel-count, body > section.gutters > p {
 	text-align: center;
+	align-content: center;
+	max-width: 100%;
+	padding-top: 50px;
 }
 
 
