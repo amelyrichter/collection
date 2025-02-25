@@ -79,7 +79,7 @@ li {
 }
 
 p {
-	max-width: 320px;
+	max-width: 420px;
 	text-align: center;
 	font-family: var(--font-family-02);
 }
@@ -98,6 +98,7 @@ audio {
 	justify-content: center;
 	width: 200px;
     height: 54px;
+	margin-top: 50px;
 }
 
 ::backdrop {
@@ -452,12 +453,13 @@ section.gutters {
 	width: 100%;
 	text-align: center;
 	margin:auto;
-
 }
+
 #channel-blocks{
 	width:100%;
 margin: auto;
 }
+
 ul#channel-blocks.show-image {
 gap: 150px 50px;
 justify-items: center;
@@ -468,7 +470,6 @@ margin-block-end: 1em;
 margin-inline-start: 0px;
 margin-inline-end: 0px;
 padding-inline-start: 40px;
-/* width: 100vw; */
 }
 
 #back-to-top {
@@ -488,6 +489,18 @@ padding-inline-start: 40px;
 
  li.link-block, li.text-block {
 	padding: 0px;
+ }
+
+ li.text-block p {
+	padding-bottom: 0px;
+	min-width: 250px;
+ }
+
+li.link-block img {
+	padding: 0px;
+	background-color: #1f51ff;
+	opacity: 0.6;
+	mix-blend-mode: normal;
  }
 
 /* Found this on code pen https://codepen.io/ShortCode/pen/oNdBKxo */

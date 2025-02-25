@@ -159,7 +159,7 @@ else if (block.class == 'Image') {
 				<dialog> 
 					<div>
 						<p>${block.title}</p>
-						<p>${block.description_html}</p>
+						<p>${ block.description_html ? block.description_html : '' }</p>
 					</div>
 					<button class="close">× close</button> 
 				</dialog>	
