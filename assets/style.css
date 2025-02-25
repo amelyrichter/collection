@@ -419,7 +419,7 @@ img, .youtube, .pdf-block, button, iframe {
 	text-align: center;
 }
 
-ul#channel-blocks {
+ul#channel-blocks, ul#channel-blocks.show-image {
 	gap: 150px 0px;
 	padding: 0px;
 	padding-top: 50px;
@@ -428,6 +428,20 @@ ul#channel-blocks {
 
 section.gutters {
 	padding: 0px;
+	width: 100%;
+}
+
+ul#channel-blocks.show-image {
+gap: 150px 50px;
+justify-items: center;
+/* display: flex;
+direction: column; */
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+padding-inline-start: 40px;
+width: 100vw;
 }
 
 
