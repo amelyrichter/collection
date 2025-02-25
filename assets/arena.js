@@ -67,11 +67,11 @@ else if (block.class == 'Image') {
 				<img src="${block.image.original.url}">
 			</button>
 				<dialog> 
+				<img src="${block.image.large.url}">
 					<div>
 						<p>${block.title}</p>
 						<p>${block.description_html}</p>
 					</div>
-					<img src="${block.image.large.url}">
 					<button class="close">× close</button> 
 				</dialog>
 		</li>
