@@ -21,6 +21,9 @@ body {
 			--font-family-01: "Space Grotesk", serif;
 								font-optical-sizing: auto;
 								font-style: normal;
+			--font-family-02: "Saira", serif;
+								font-optical-sizing: auto;
+								font-style: normal;
 
 	font-size: var(--base-size);
 	font-family: var(--font-family-01);
@@ -40,6 +43,11 @@ body {
 		--gutter-size: calc(3 * var(--base-size));
 	}
 }
+
+html {
+	scroll-behavior: smooth;
+	width: 100vw;
+  }
 
 header {
 	/* background-color: var(--color-blue-02); */
@@ -70,13 +78,15 @@ li {
 }
 
 p {
-	max-width: 60vw;
+	max-width: 320px;
+	text-align: center;
+	font-family: var(--font-family-02);
 }
 
 h1 {
 	font-size: calc(3 * var(--base-size));
 	color: var(--color-blue-04);
-	font-family: "PT Sans Narrow", serif;
+	font-family: var(--font-family-02);
 	font-optical-sizing: auto;
 	font-weight: 900;
 	font-style: normal;
@@ -172,6 +182,7 @@ audio {
 /* modal styling start */
 button {
 	outline: none;
+	font-family: var(--font-family-02);
 	width: 20px;
 	height: 20px;
 	color: #dedfe4;
@@ -444,6 +455,22 @@ padding-inline-start: 40px;
 width: 100vw;
 }
 
+#back-to-top {
+	font-size: 8px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border: none;
+	border-radius: 5px;
+	background: var(--color-blue-05);
+	color: #fff;
+	box-shadow: 0px 0px 4px 4px var(--color-blue-05);
+	padding: 10px 20px;
+	text-decoration: none;
+	opacity: 0.7;
+  }
+
+ 
 
 /* Found this on code pen https://codepen.io/ShortCode/pen/oNdBKxo */
 /* Was looking for something that was emphazising the dive feeking */
