@@ -199,12 +199,13 @@ dialog {
     align-items: center;
     text-align: center;
     padding: 30px;
-    border-radius: 50px;
-    box-shadow: 0 0 15px rgba(31, 81, 255, 0.8);
-    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 20%;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.9); */
+    background-color: rgba(0, 0, 0, 0.1);
     color: var(--color-white);
     max-width: 400px;
     width: 90%;
+	border: 0px;
 }
 
 /* @keyframes animate {
