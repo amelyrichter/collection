@@ -46,7 +46,7 @@ body {
 
 html {
 	scroll-behavior: smooth;
-	width: 100vw;
+	/* width: 100vw; */
   }
 
 header {
@@ -333,6 +333,9 @@ img, .youtube, .pdf-block, button, iframe {
 
 .gutters {
 	padding-inline: calc(3 * var(--gutter-size));
+	text-align: center;
+	align-items: center;
+	justify-content: center;
 }
 
 
@@ -419,29 +422,38 @@ img, .youtube, .pdf-block, button, iframe {
 	/* gap: calc(4 * var(--gutter-size));  */
 	justify-items: center; 
 	padding-top: 20px;
+	text-align: center;
+
 }
 
 #channel-blocks{
 	cursor: url('../links/angel-haken.png'), auto;
-
 }
 
 #channel-count, body > section.gutters > p {
 	text-align: center;
 }
 
+
 ul#channel-blocks, ul#channel-blocks.show-image {
 	gap: 150px 0px;
 	padding: 0px;
 	padding-top: 50px;
-	width: 80vw;
+	/* width: 80vw; */
+	margin-left: 0px;
 }
 
 section.gutters {
 	padding: 0px;
 	width: 100%;
-}
+	text-align: center;
+	margin:auto;
 
+}
+#channel-blocks{
+	width:100%;
+margin: auto;
+}
 ul#channel-blocks.show-image {
 gap: 150px 50px;
 justify-items: center;
@@ -452,7 +464,7 @@ margin-block-end: 1em;
 margin-inline-start: 0px;
 margin-inline-end: 0px;
 padding-inline-start: 40px;
-width: 100vw;
+/* width: 100vw; */
 }
 
 #back-to-top {
@@ -470,7 +482,9 @@ width: 100vw;
 	opacity: 0.7;
   }
 
- 
+ li.link-block, li.text-block {
+	padding: 0px;
+ }
 
 /* Found this on code pen https://codepen.io/ShortCode/pen/oNdBKxo */
 /* Was looking for something that was emphazising the dive feeking */
