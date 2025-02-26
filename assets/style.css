@@ -106,7 +106,7 @@ audio {
 	backdrop-filter: blur(8px);
 }
 
-.text-block, .link-block {
+.text-block {
 	padding: 60px;
 }
 
@@ -114,7 +114,7 @@ audio {
 	padding-bottom: 40px;
 } */
 
-.image-block, .pdf-bubble {
+.image-block, .pdf-bubble, .link-block {
 	
     display: block;
 	border-radius: 100%;
@@ -169,7 +169,7 @@ audio {
 	0% { transform: translate(0, 0); }
 	25% { transform: translate(15px, -10px); }
 	50% { transform: translate(-10px, -20px); }
-	75% { transform: translate(10px, -10px); }
+	/* 75% { transform: translate(10px, -10px); } */
 	100% { transform: translate(0, 0); }
 }
 
@@ -381,6 +381,7 @@ img, .youtube, .pdf-block, button, iframe {
 .show-link li.link-block {
 	display: block;
 }
+
 /* Filter show and hide section end */
 
 .nav-button {
@@ -496,11 +497,26 @@ padding-inline-start: 40px;
 	min-width: 250px;
  }
 
-li.link-block img {
+/* li.link-block img {
 	padding: 0px;
 	background-color: #1f51ff;
 	opacity: 0.6;
-	mix-blend-mode: normal;
+	mix-blend-mode: luminosity;
+	box-shadow: 0px 0px 4px 4px var(--color-blue-05);
+ }
+
+ .link-block {
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	display: block;
+	filter: none;
+ } */
+
+ #channel-blocks.show-links .link-block {
+	display: block;
  }
 
 /* Found this on code pen https://codepen.io/ShortCode/pen/oNdBKxo */
